@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>GAMEZONE X — Arcade</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">GAME<span>ZONE</span> X</div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#games">Games</a>
+    </nav>
+    <div class="player">⭐ <b id="level">LVL 1</b> · 🪙 <b id="coins">100</b></div>
+</header>
+
+<section class="hero" id="home">
+    <div class="badge">🎮 10 REAL PLAYABLE GAMES</div>
+    <h1>PLAY.<br><span>COMPETE.</span><br>REPEAT.</h1>
+    <p>The ultimate browser mini-game arcade.</p>
+    <a href="#games" class="main-btn">START PLAYING 🚀</a>
+</section>
+
+<section class="stats">
+    <div>🏆 <b id="xp">0</b><small>XP</small></div>
+    <div>🎮 <b id="played">0</b><small>PLAYED</small></div>
+    <div>🔥 <b id="wins">0</b><small>WINS</small></div>
+</section>
+
+<section id="games">
+    <div class="heading">
+        <div>
+            <small>ARCADE</small>
+            <h2>CHOOSE A GAME</h2>
+        </div>
+        <input id="search" placeholder="🔎 Search games">
+    </div>
+
+    <div class="filters">
+        <button onclick="filterGames('all')">ALL</button>
+        <button onclick="filterGames('arcade')">ARCADE</button>
+        <button onclick="filterGames('action')">ACTION</button>
+        <button onclick="filterGames('brain')">BRAIN</button>
+    </div>
+
+    <div class="games">
+
+        <div class="card" data-cat="arcade" data-name="snake" onclick="openGame('snake')">
+            <i>🐍</i><h3>Snake</h3><p>Eat and grow.</p><button>PLAY →</button>
+        </div>
+
+        <div class="card" data-cat="arcade" data-name="breakout" onclick="openGame('breakout')">
+            <i>🧱</i><h3>Breakout</h3><p>Destroy every brick.</p><button>PLAY →</button>
+        </div>
+
+        <div class="card" data-cat="arcade" data-name="pong" onclick="openGame('pong')">
+            <i>🏓</i><h3>Pong</h3><p>Beat the CPU.</p><button>PLAY →</button>
+        </div>
+
+        <div class="card" data-cat="action" data-name="space shooter" onclick="openGame('space')">
+            <i>🚀</i><h3>Space Shooter</h3><p>Destroy enemies.</p><button>PLAY →</button>
+        </div>
+
+        <div class="card" data-cat="arcade" data-name="flappy" onclick="openGame('flappy')">
+            <i>🐦</i><h3>Flappy X</h3><p>Fly through pipes.</p><button>PLAY →</button>
+        </div>
+
+        <div class="card" data-cat="action" data-name="aim trainer" onclick="openGame('aim')">
+            <i>🎯</i><h3>Aim Trainer</h3><p>Hit targets quickly.</p><button>PLAY →</button>
+        </div>
+
+        <div class="card" data-cat="action" data-name="reaction" onclick="openGame('reaction')">
+            <i>⚡</i><h3>Reaction Test</h3><p>Test your speed.</p><button>PLAY →</button>
+        </div>
+
+        <div class="card" data-cat="brain" data-name="memory" onclick="openGame('memory')">
+            <i>🧠</i><h3>Memory Match</h3><p>Match the cards.</p><button>PLAY →</button>
+        </div>
+
+        <div class="card" data-cat="action" data-name="whack mole" onclick="openGame('mole')">
+            <i>🔨</i><h3>Whack-a-Mole</h3><p>Hit the mole.</p><button>PLAY →</button>
+        </div>
+
+        <div class="card" data-cat="brain" data-name="typing" onclick="openGame('typing')">
+            <i>⌨️</i><h3>Typing Speed</h3><p>Test your WPM.</p><button>PLAY →</button>
+        </div>
+
+    </div>
+</section>
+
+<div id="modal" class="modal">
+    <div class="window">
+        <button class="close" onclick="closeGame()">×</button>
+        <div id="game"></div>
+    </div>
+</div>
+
+<footer>
+    <h2>GAME<span>ZONE</span> X</h2>
+    <p>Play more. Score more.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
